@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Дадаць{% endblock %}
+
+{% block body %}
+    <div class="container" style="padding-top: 50px">
+    <div style="display: flex; justify-content: center">
+        <h2>Даданне артыкула</h2>
+    </div>
+
+    <form method="post">
+    <input type="text" name="title" id="title" class="container form-control" placeholder="Увядзіце назву артыкула"><br>
+    <textarea name="intro" id="intro" class="container form-control" placeholder="Увядзіце анонс"></textarea><br>
+    <textarea name="text" id="text" class="container form-control" placeholder="Увядзіце асноўны тэкст"></textarea><br>
+    <input type="submit" class="btn btn-success" value="Адправіць">
+    </form>
+    </div>
+{% endblock %}

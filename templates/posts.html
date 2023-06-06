@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Артыкулы{% endblock %}
+
+{% block body %}
+    {% if table|length > 0 %}
+        {% for el in table %}
+            <div class="alert alert-success">
+                <h2>{{ el.title }}</h2>
+                <p>{{ el.intro }}</p>
+                <p><b>Дата: {{ el.date.date() }}</b></p>
+            <a href="/posts/{{ el.id }}" class="btn btn-warning">Больш падрабязна</a><br>
+            </div>
+        {% endfor %}
+    {% else %}
+        Артыкулы яшчэ адсутнічаюць...
+    {% endif %}
+{% endblock %}

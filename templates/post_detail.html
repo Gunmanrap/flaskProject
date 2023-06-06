@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ table.title }}{% endblock %}
+
+{% block body %}
+    <div class="alert alert-info">
+        <h1>{{ table.title }}</h1>
+
+        <div class="alert alert-info">
+            <p>{{ table.intro }}</p>
+            <p><b>Дата: {{ table.date.date() }}</b></p>
+            <a href="/posts/{{ table.id }}/delete" class="btn btn-danger">Выдаліць</a>
+            <a href="/posts/{{ table.id }}/update" class="btn btn-success">Рэдагаваць</a>
+        </div>
+    </div>
+{% endblock %}
